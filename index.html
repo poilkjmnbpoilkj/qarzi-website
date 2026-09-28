@@ -507,22 +507,27 @@
   <span class="close-modal">&times;</span>
   <img id="modalImage" src="" alt="تصویر نمونه‌کار">
 </div>
+<script><div id="imageModal" class="image-modal">
+  <span class="close-modal">&times;</span>
+  <img id="modalImage" src="" alt="تصویر نمونه‌کار">
+</div>
 <script>
-  const modal = document.getElementById("imageModal");
+  const portfolioImages = document.querySelectorAll("#portfolio .portfolio-item img");
+  const imageModal = document.getElementById("imageModal");
   const modalImage = document.getElementById("modalImage");
   const closeModal = document.querySelector(".close-modal");
-  document.querySelectorAll(".portfolio-item img").forEach(function(img) {
+  portfolioImages.forEach(function(img) {
     img.addEventListener("click", function() {
-      modal.style.display = "flex";
-      modalImage.src = this.src;
+      modalImage.src = img.src;
+      imageModal.style.display = "flex";
     });
   });
   closeModal.addEventListener("click", function() {
-    modal.style.display = "none";
+    imageModal.style.display = "none";
   });
-  modal.addEventListener("click", function(e) {
-    if (e.target === modal) {
-      modal.style.display = "none";
+  imageModal.addEventListener("click", function(event) {
+    if (event.target === imageModal) {
+      imageModal.style.display = "none";
     }
   });
 </script>
