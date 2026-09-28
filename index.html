@@ -130,39 +130,41 @@
       background: #0755a5;
     }
 
-    /* نمونه کارها */
-
-.portfolio-grid {
+    /* نمونه 
+   .portfolio-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
+  gap: 16px;
   max-width: 420px;
-  margin: 20px auto;
+  margin: 25px auto;
 }
-
 .portfolio-item {
+  background: #fff;
+  padding: 6px;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
 }
-
 .portfolio-item img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   display: block;
   border-radius: 8px;
+  transition: transform 0.3s ease;
 }
-
+.portfolio-item:hover img {
+  transform: scale(1.03);
+}
 @media (max-width: 600px) {
   .portfolio-grid {
     max-width: 90%;
-    gap: 10px;
+    gap: 12px;
   }
-
   .portfolio-item img {
     height: 150px;
   }
-}
+} 
   </style>
 </head>
 
