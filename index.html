@@ -513,12 +513,11 @@
   const closeModal = document.querySelector(".close-modal");
 
   portfolioImages.forEach(function(img) {
-    img.addEventListener("click", function() {
-      modalImage.src = img.src;
-      imageModal.style.display = "flex";
-    });
+  img.addEventListener("click", function() {
+    modalImage.src = this.getAttribute("src");
+    imageModal.style.display = "flex";
   });
-
+});
   closeModal.addEventListener("click", function() {
     imageModal.style.display = "none";
   });
