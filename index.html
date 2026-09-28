@@ -129,59 +129,53 @@
     .phone {
       background: #0755a5;
     }
-
-    /* نمونه 
-   .portfolio-grid {
+/* گالری نمونه‌کار */
+.portfolio-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
-  max-width: 420px;
-  margin: 25px auto;
-}
-.portfolio-item {
-  background: #fff;
-  padding: 6px;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-}
-.portfolio-item img {
+  gap: 12px;
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  max-width: 350px;
+  margin: 20px auto;
+}
+
+.portfolio-item {
+  width: 100%;
+  background: #fff;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+
+.portfolio-item img {
   display: block;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 7px;
+  cursor: pointer;
 }
-.portfolio-item:hover img {
-  transform: scale(1.03);
-}
-@media (max-width: 600px) {
-  .portfolio-grid {
-    max-width: 90%;
-    gap: 12px;
-  }
-  .portfolio-item img {
-    height: 150px;
-  }
-} 
-    .image-modal {
+
+/* عکس بزرگ */
+.image-modal {
   display: none;
   position: fixed;
   z-index: 9999;
   inset: 0;
-  background: rgba(0, 0, 0, 0.88);
+  background: rgba(0,0,0,0.88);
   align-items: center;
   justify-content: center;
   padding: 20px;
 }
 
 .image-modal img {
-  max-width: 90%;
+  width: auto;
+  height: auto;
+  max-width: 90vw;
   max-height: 85vh;
   object-fit: contain;
   border-radius: 10px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
 .close-modal {
@@ -192,91 +186,16 @@
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
-  line-height: 1;
 }
 
-.close-modal:hover {
-  opacity: 0.7;
-}
-    .portfolio-item img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  display: block;
-  border-radius: 8px;
-}
-.image-modal img {
-  width: auto;
-  height: auto;
-  max-width: 90vw;
-  max-height: 85vh;
-  object-fit: contain;
-}
 @media (max-width: 600px) {
+  .portfolio-grid {
+    max-width: 90%;
+    gap: 10px;
+  }
+
   .portfolio-item img {
     height: 130px;
-  }
-}/* اندازه ثابت عکس‌های گالری */
-#portfolio .portfolio-grid {
-  display: grid !important;
-  grid-template-columns: 1fr !important;
-  max-width: 420px !important;
-  gap: 16px !important;
-}
-#portfolio .portfolio-item {
-  width: 100% !important;
-  padding: 6px !important;
-  box-sizing: border-box !important;
-}
-#portfolio .portfolio-item img {
-  width: 100% !important;
-  height: 150px !important;
-  max-height: 150px !important;
-  object-fit: cover !important;
-  display: block !important;
-}
-#imageModal img {
-  width: auto !important;
-  height: auto !important;
-  max-width: 90vw !important;
-  max-height: 85vh !important;
-  object-fit: contain !important;
-}
-@media (max-width: 600px) {
-  #portfolio .portfolio-item img {
-    height: 130px !important;
-    max-height: 130px !important;
-  }
-}/* اندازه ثابت عکس‌های گالری */
-#portfolio .portfolio-grid {
-  display: grid !important;
-  grid-template-columns: 1fr !important;
-  max-width: 420px !important;
-  gap: 16px !important;
-}
-#portfolio .portfolio-item {
-  width: 100% !important;
-  padding: 6px !important;
-  box-sizing: border-box !important;
-}
-#portfolio .portfolio-item img {
-  width: 100% !important;
-  height: 150px !important;
-  max-height: 150px !important;
-  object-fit: cover !important;
-  display: block !important;
-}
-#imageModal img {
-  width: auto !important;
-  height: auto !important;
-  max-width: 90vw !important;
-  max-height: 85vh !important;
-  object-fit: contain !important;
-}
-@media (max-width: 600px) {
-  #portfolio .portfolio-item img {
-    height: 130px !important;
-    max-height: 130px !important;
   }
 }
   </style>
